@@ -11,6 +11,8 @@ script:
   - echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
   - echo $PYTHONPATH
   - which python
+  - which pip
+  - pip
   - uname -a
 
 branches:

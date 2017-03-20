@@ -5,13 +5,11 @@ python:
 
 install:
   - pip install pytest pytest-cov
-  
+
 script:
-  - pytest  --junitxml=report.xml --cov
+  - if [[ $(python --version) | grep "Python 3" ]]; then pytest  --junitxml=report.xml --cov; fi
+  - if [[ $(python --version) | grep "Python 2.7" ]]; then py.test  --junitxml=report.xml --cov; fi
   - echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
-  - echo $PYTHONPATH
-  - which python
-  - which pip
   - uname -a
 
 branches:

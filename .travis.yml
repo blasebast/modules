@@ -7,11 +7,11 @@ install:
   - pip install -y pytest-cov logging
 
 script:
-pytest  --junitxml=report.xml --cov
-echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
-echo $PYTHONPATH
-which python
-uname -a
+  - pytest  --junitxml=report.xml --cov
+  - echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
+  - echo $PYTHONPATH
+  - which python
+  - uname -a
 
 branches:
   only:

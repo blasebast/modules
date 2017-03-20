@@ -8,7 +8,8 @@ install:
 
 script:
   - env
-  - py.test  --junitxml=report.xml --cov; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]]; then py.test  --junitxml=report.xml --cov; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.5 ]]; then pytest  --junitxml=report.xml --cov; fi
   - echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
   - uname -a
 

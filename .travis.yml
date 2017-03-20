@@ -4,15 +4,14 @@ python:
   - "3.5"
 
 install:
-  - pip install pytest-cov logging
-
+  - pip install pytest pytest-cov
+  
 script:
   - pytest  --junitxml=report.xml --cov
   - echo "finished successfully at $(date '+ %Y-%m-%d %H:%M:%S')"
   - echo $PYTHONPATH
   - which python
   - which pip
-  - pip
   - uname -a
 
 branches:

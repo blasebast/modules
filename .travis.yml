@@ -27,4 +27,3 @@ deploy:
   on:
     tags: true
     repo: blasebast/sebmodules
-    condition: $TOXENV == py27

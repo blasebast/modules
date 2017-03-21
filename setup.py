@@ -34,7 +34,7 @@ setup(
     install_requires=requirements,
     license="GNU General Public License v3",
     zip_safe=False,
-    keywords='sebmodules',
+    keywords='sebmodules, sebastian, blasiak, logging, smoothlogging',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
